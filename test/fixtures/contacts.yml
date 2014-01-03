@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jigsawid: 1
+  company_id: 1
+  firstname: MyString
+  lastname: MyString
+  title: MyText
+  city: MyString
+  state: MyString
+  zip: MyString
+
+two:
+  jigsawid: 1
+  company_id: 1
+  firstname: MyString
+  lastname: MyString
+  title: MyText
+  city: MyString
+  state: MyString
+  zip: MyString

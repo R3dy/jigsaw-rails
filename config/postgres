@@ -1,0 +1,34 @@
+\d
+drop table schema_migrations;
+\q
+\d
+drop table accuvantfings
+;
+drop table accuvantfindings;
+drop table assessments;
+drop table findings hosts imports ports;
+drop table findings, hosts, imports, mappings, ports;
+\d
+drop table reportfindings;
+drop table users;
+\d
+drop table schema_migrations;
+\d
+quit
+clear
+\q
+\d
+drop table accuvantfindings, assessments, findings, hosts, imports, mappings, ports, reportfindings, users
+;
+\d
+drop table schema_Migrations;
+drop table schema_Migrations;
+\d
+\quit
+\d
+drop table companies, contacts, schema_migrations;
+\d
+\q
+\list
+\d postgres
+\s postgres

@@ -1,0 +1,61 @@
+<%= form_for(@company) do |f| %>
+  <% if @company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% @company.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :jigsawid %><br>
+    <%= f.number_field :jigsawid %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :overview %><br>
+    <%= f.text_area :overview %>
+  </div>
+  <div class="field">
+    <%= f.label :headquarters %><br>
+    <%= f.text_area :headquarters %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :industries %><br>
+    <%= f.text_area :industries %>
+  </div>
+  <div class="field">
+    <%= f.label :employees %><br>
+    <%= f.text_field :employees %>
+  </div>
+  <div class="field">
+    <%= f.label :revenue %><br>
+    <%= f.text_field :revenue %>
+  </div>
+  <div class="field">
+    <%= f.label :ownership %><br>
+    <%= f.text_field :ownership %>
+  </div>
+  <div class="field">
+    <%= f.label :contacts %><br>
+    <%= f.number_field :contacts %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
