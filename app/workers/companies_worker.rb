@@ -23,7 +23,7 @@ class CompaniesWorker
     newcompany[:employees] = result.to_s.split('<td  class="rJust"><label>Employees</label></td>')[1].to_s.split('<td>')[1].to_s.split('</td>')[0].to_s.force_encoding("UTF-8")
     newcompany[:revenue] = result.to_s.split('<td  class="rJust"><label>Revenue</label></td>')[1].to_s.split('<td>')[1].to_s.split('</td>')[0].to_s.force_encoding("UTF-8")
     newcompany[:ownership] = result.to_s.split('<td  class="rJust"><label>Ownership</label></td>')[1].to_s.split('<td>')[1].to_s.split('</td>')[0].to_s.force_encoding("UTF-8")
-    newcompany[:contacts] = result.to_s.split('<h6 id="contactCount" class="marginTop10">')[1].to_s.split(" ")[0].to_s.force_encoding("UTF-8")
+    newcompany[:contacts] = result.to_s.split('<h6 id="contactCount" class="marginTop10">')[1].to_s.split(" ")[0].to_s.force_encoding("UTF-8").gsub(/,/, "").to_i
     createcompany = Company.new(newcompany)
     if !createcompany.save
       puts "something went wrong :("
